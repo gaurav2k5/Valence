@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #fafafa;
+  --color-muted: #888888;
+  --color-border: #333333;
+}
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #fafafa;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: transparent;
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
