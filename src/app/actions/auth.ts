@@ -2,7 +2,6 @@
 
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
-import { isRedirectError } from "next/navigation";
 
 export async function verifyOtpAction(credentials: any) {
   try {
@@ -13,7 +12,7 @@ export async function verifyOtpAction(credentials: any) {
     // signIn will throw a redirect error on success
     return { success: true };
   } catch (error: any) {
-    if (isRedirectError(error)) {
+    if (error && typeof error === "object" && "digest" in error && typeof (error as any).digest === "string" && (error as any).digest.startsWith("NEXT_REDIRECT")) {
       throw error; // Let Next.js handle the redirect!
     }
 
