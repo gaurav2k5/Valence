@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Users, Code, Globe, ShieldCheck, MapPin } from "lucide-react";
 import Link from "next/link";
 
-// Mock data hardcoded for FieldSync for prototype purposes
+// Initial data hardcoded for FieldSync for prototype purposes
 const projectData = {
   id: "p1",
   name: "FieldSync",

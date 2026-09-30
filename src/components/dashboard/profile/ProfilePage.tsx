@@ -25,8 +25,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-/* --- Mock Data --- */
-
 const profileData = {
   name: "Alex Chen",
   username: "@alexchen",

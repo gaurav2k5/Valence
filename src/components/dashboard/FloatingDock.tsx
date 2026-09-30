@@ -26,7 +26,7 @@ const navItems = [
   { label: "Profile", href: "/dashboard/profile", icon: UserCircle },
 ];
 
-const mockNotifications = [
+const initialNotifications = [
   {
     id: "n1",
     type: "match",
@@ -66,7 +66,7 @@ export function FloatingDock() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const [notifications, setNotifications] = useState(mockNotifications);
+  const [notifications, setNotifications] = useState(initialNotifications);
 
   const unreadCount = notifications.filter((n) => !n.read).length;
 

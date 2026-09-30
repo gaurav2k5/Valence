@@ -10,7 +10,7 @@ export interface PersonData {
   compatibility: number;
 }
 
-export const discoverPeopleMock: PersonData[] = [
+export const discoverPeopleData: PersonData[] = [
   {
     id: "u1",
     name: "Sarah Mitchell",

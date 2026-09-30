@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useAnimation, PanInfo, AnimatePresence } from "framer-motion";
 import { MapPin, X, Heart, Star, Sparkles } from "lucide-react";
-import { discoverPeopleMock, PersonData } from "./DiscoverPeopleMock";
+import { discoverPeopleData, PersonData } from "./DiscoverPeopleData";
 
 /* --- Circular Progress --- */
 function CircularProgress({ percentage, size = 44 }: { percentage: number; size?: number }) {
@@ -191,13 +191,13 @@ function SwipeCard({ person, isFront, onSwipe, index }: SwipeCardProps) {
 /* --- Main Component --- */
 
 export function DiscoverPeople({ searchQuery }: { searchQuery: string }) {
-  const [cards, setCards] = useState<PersonData[]>(discoverPeopleMock);
+  const [cards, setCards] = useState<PersonData[]>(discoverPeopleData);
   const [superLiked, setSuperLiked] = useState<string | null>(null);
 
   // Client-side filtering applies to the initial deck
   useEffect(() => {
     const searchLower = searchQuery.toLowerCase();
-    const filtered = discoverPeopleMock.filter((p) => {
+    const filtered = discoverPeopleData.filter((p) => {
       return (
         p.name.toLowerCase().includes(searchLower) ||
         p.role.toLowerCase().includes(searchLower) ||
@@ -279,7 +279,7 @@ export function DiscoverPeople({ searchQuery }: { searchQuery: string }) {
                 You've reviewed all potential collaborators in your area. Check back later for new matches.
               </p>
               <button 
-                onClick={() => setCards(discoverPeopleMock)}
+                onClick={() => setCards(discoverPeopleData)}
                 className="px-6 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-[13px] font-medium text-white hover:bg-white/[0.08] transition-all"
               >
                 Reset Deck

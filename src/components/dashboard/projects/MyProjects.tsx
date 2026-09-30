@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, FolderKanban, MoreHorizontal, ArrowUpRight, Clock, Users } from "lucide-react";
 import Link from "next/link";
 
-// Mock Data
 const myProjects = [
   {
     id: "p1",

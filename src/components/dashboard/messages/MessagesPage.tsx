@@ -15,8 +15,6 @@ import {
   Sparkles,
 } from "lucide-react";
 
-/* --- Mock Data --- */
-
 type Message = {
   id: string;
   text: string;

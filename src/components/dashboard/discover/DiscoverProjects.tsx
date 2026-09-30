@@ -16,7 +16,7 @@ export interface ProjectData {
   stage: string;
 }
 
-export const discoverProjectsMock: ProjectData[] = [
+export const discoverProjectsData: ProjectData[] = [
   {
     id: "p1",
     name: "FieldSync",
@@ -87,7 +87,7 @@ export const discoverProjectsMock: ProjectData[] = [
 
 export function DiscoverProjects({ searchQuery }: { searchQuery: string }) {
   // Client-side filtering
-  const filteredProjects = discoverProjectsMock.filter((p) => {
+  const filteredProjects = discoverProjectsData.filter((p) => {
     const searchLower = searchQuery.toLowerCase();
     return (
       p.name.toLowerCase().includes(searchLower) ||
