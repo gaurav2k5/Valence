@@ -2,6 +2,8 @@
 
 **Your idea. Find the people who can build it.**
 
+🌍 **Live Demo:** [valancesite.netlify.app](https://valancesite.netlify.app/)
+
 Valence is a platform designed to bridge the gap between ideas and execution. Whether you have a groundbreaking concept but lack the technical skills, or you're a developer looking for your next big project, Valence connects you with the right people to make it happen.
 
 ## 🌟 What is Valence?
